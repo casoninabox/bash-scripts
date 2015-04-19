@@ -38,8 +38,3 @@ done
 
 # Reset IFS
 IFS=$SAVEIFS
-
-# Copy Logo
-cd ..
-cp logo.png $MYPATH/logo.png
-echo "Copied Logo"
