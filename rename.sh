@@ -13,6 +13,16 @@ FILEEXTS=$2
 # Avoid overriding same filenames
 COUNTER=1
 cd $MYPATH
+
+# ./rename myfolder "*.jpg *.png *.foo"
+# It doesn't work, it returns all files...
+# for i in $(ls $FILEEXTS -rt); do 
+
+# ./rename myfolder jpg,png,foo
+# I can't even get this to work from console (on windows)
+# Equiv is: ls *.{jpg,png,foo}
+# for i in $(ls *.{$FILEEXTS} -rt); do
+
 for i in $(ls *.$FILEEXTS -rt); do
 	filename="${i##*/}"
 	extension="${filename##*.}"
